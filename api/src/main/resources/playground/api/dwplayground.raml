@@ -1,0 +1,86 @@
+#%RAML 1.0
+title: DW Playground Backend 2.0 API
+version: v1
+baseUri: https://localhost:8080/
+mediaType: application/json
+documentation:
+  - title: DW Playground Backend
+    content: |
+      Dataweave Services for Transform component in Mozart
+types:
+  TransformRequest:
+    type: object
+    properties:
+      main: string
+      resources:
+        type: object
+        properties:
+          //: string
+      inputs: TransformInput[]
+    examples:
+      simple:
+        !include examples/transform-request.json
+      reader-options:
+        !include examples/transform-request-reader-options.json
+  TransformInput:
+    type: object
+    properties:
+      name: string
+      content: string
+      contentType: string
+      properties?:
+        type: object
+
+  TransformResponse:
+    type: object
+    properties:
+      success: boolean
+      error?:
+        type: object
+        properties:
+          message: string
+          location: Location
+          logs?: Log[]
+      result?:
+        type: object
+        properties:
+          content: string
+          contentType: string
+          encoding?: string
+          logs: Log[]
+    examples:
+      success:
+        !include examples/transform-response-success.json
+      failure:
+        !include examples/transform-response-failure.json
+  Log:
+    type: object
+    additionalProperties: true
+    properties:
+      level: string
+      timestamp: string
+      message: string
+
+  Location:
+    properties:
+        start: Position
+        end: Position
+  Position:
+      properties:
+        index: number
+        line: number
+        column: number
+
+/transform:
+  displayName: DataWeave Preview Runner
+  description: run a given dataweave script with the provided inputs
+  post:
+    body: TransformRequest
+    responses:
+      200:
+        description: The response is an object with a success field, if it was successful it contains a result field, otherwise an error field
+        body: TransformResponse
+/{resource}:
+  displayName: Static content
+  get:
+    description: returns the static content at the specified path

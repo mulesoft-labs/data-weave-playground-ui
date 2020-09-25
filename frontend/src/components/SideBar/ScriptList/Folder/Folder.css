@@ -1,0 +1,18 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    .label {
+      display: block;
+      padding: 6px 16px;
+      font-size: 13px;
+      cursor: pointer; 
+      
+      &:hover {
+        background: $sideBarHoverBg;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,45 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &.error {
+      background: #fffafa;
+    }
+
+    .title {
+       text-transform: uppercase;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
+      min-height: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background: $sideBarTitleBg;
+      color: $steel1;
+      font-weight: bold;
+
+      .leftItems {
+        display: flex;
+      }
+
+      .selector {
+        font-size: 12px;
+      }
+    }
+
+    .editor {
+      height: calc(100% - 45px) !important;
+    }
+  }
+
+}

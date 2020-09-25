@@ -1,0 +1,19 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    height: calc(100% - 60px);
+  }
+
+  .handle {
+    min-height: 3px;
+    height: 3px;
+    width: 100%;
+    background: $toolBarHandle;
+    cursor: row-resize;
+    margin-top: -3px;
+    z-index: 999;
+  }
+
+}

@@ -1,0 +1,36 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+
+    .title {
+      text-transform: uppercase;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
+      min-height: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background: $sideBarTitleBg;
+      color: $steel1;
+      font-weight: bold;
+
+      .addButton {
+        cursor: pointer;
+        opacity: 0.6;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}

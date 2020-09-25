@@ -1,0 +1,138 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "diagnostics": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "sourceMap": true,
+    "outDir": "build",
+    "moduleResolution": "node",
+    "stripInternal": true,
+    "pretty": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "monaco-editor",
+      "node",
+      "jest"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "components*": [
+        "src/components*",
+        "src/components"
+      ],
+      "common/types": [
+        "src/app/common/types"
+      ],
+      "common/treeNode/types": [
+        "src/app/common/treeNode/types"
+      ],
+      "dataweave/types": [
+        "src/app/dataweave/types"
+      ],
+      "project/types": [
+        "src/app/project/types"
+      ],
+      "gist/types": [
+        "src/app/gist/types"
+      ],
+      "fileSystem/types": [
+        "src/app/fileSystem/types"
+      ],
+      "ui/types": [
+        "src/app/ui/types"
+      ],
+      "common/reducer": [
+        "src/app/common/reducer"
+      ],
+      "dataweave/reducer": [
+        "src/app/dataweave/reducer"
+      ],
+      "project/reducer": [
+        "src/app/project/reducer"
+      ],
+      "gist/reducer": [
+        "src/app/gist/reducer"
+      ],
+      "fileSystem/reducer": [
+        "src/app/fileSystem/reducer"
+      ],
+      "ui/reducer": [
+        "src/app/ui/reducer"
+      ],
+      "dataweave/actions": [
+        "src/app/dataweave/actions"
+      ],
+      "project/actions": [
+        "src/app/project/actions"
+      ],
+      "gist/actions": [
+        "src/app/gist/actions"
+      ],
+      "fileSystem/actions": [
+        "src/app/fileSystem/actions"
+      ],
+      "ui/actions": [
+        "src/app/ui/actions"
+      ],
+      "common/helpers": [
+        "src/app/common/helpers"
+      ],
+      "dataweave/helpers": [
+        "src/app/dataweave/helpers"
+      ],
+      "project/helpers": [
+        "src/app/project/helpers"
+      ],
+      "fileSystem/helpers": [
+        "src/app/fileSystem/helpers"
+      ],
+      "gist/helpers": [
+        "src/app/gist/helpers"
+      ],
+      "dataweave/selectors": [
+        "src/app/dataweave/selectors"
+      ],
+      "project/selectors": [
+        "src/app/project/selectors"
+      ],
+      "fileSystem/selectors": [
+        "src/app/fileSystem/selectors"
+      ],
+      "gist/selectors": [
+        "src/app/gist/selectors"
+      ],
+      "ui/selectors": [
+        "src/app/ui/selectors"
+      ],
+      "use_cases*": [
+        "src/use_cases*",
+        "src/use_cases"
+      ],
+      "managers*": [
+        "src/managers*",
+        "src/managers"
+      ]
+    },
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es5",
+      "es2015",
+      "es7",
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+    "build"
+  ],
+  "include": [
+    "src/**/*",
+    "globals.d.ts"
+  ]
+}

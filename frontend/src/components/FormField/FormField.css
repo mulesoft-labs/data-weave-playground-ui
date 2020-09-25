@@ -1,0 +1,28 @@
+@import 'palette';
+
+:local {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: $formFieldColor;
+
+    &.error {
+      color: $formFieldError;
+    }
+  }
+
+  ul.error {
+    color: $formFieldError;
+    font-size: 12px;
+    padding: 15px;
+    margin: 0px;
+  }
+
+}

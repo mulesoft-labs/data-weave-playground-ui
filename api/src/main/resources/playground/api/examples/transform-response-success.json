@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "result": {
+    "content": "{\n  \"message\": \"Hello world!\"\n}",
+    "contentType": "application/json",
+    "encoding": "UTF-8",
+    "logs": [
+
+    ]
+  }
+}

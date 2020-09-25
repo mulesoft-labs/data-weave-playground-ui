@@ -1,0 +1,77 @@
+:local {
+
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .leftContent {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5em;
+  }
+
+  .projectName {
+    font-size: 20px;
+    margin-left: 0.7em;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 3px;
+    max-width: 350px;
+
+    &:hover {
+      border-color: #ddd;
+    }
+    
+    &:focus {
+      border-color: #aaa;
+    }
+  }
+
+  .ellipsis {
+    margin-top: 5px;
+  }
+
+  .edit {
+    margin-top: 1px;
+    margin-left: 0.7em;
+    cursor: pointer;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    margin-right: 3em;
+  }
+
+  .action {
+    display: flex;
+    align-tiems: center;
+    margin-left: 3.5em;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+
+    &:hover {
+      color: #087299;
+      fill: #087299
+    }
+
+    .icon {
+      margin-top: 2px;
+      margin-right: 0.5em;
+    }
+
+    & > * {
+      margin-left: 5px;
+    }
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+}

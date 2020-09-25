@@ -1,0 +1,16 @@
+:local {
+
+  .wrapper {
+    min-height: 30px;
+    border: 1px solid #ff6969;
+    background: #ffe1e1;
+    border-radius: 3px;
+    margin: 10px 10px;
+    color: #a90000;
+    font-size: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+}

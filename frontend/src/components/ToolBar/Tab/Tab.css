@@ -1,0 +1,33 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    display: flex;
+    color: $steel1;
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 0px 10px;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    & .icon {
+      margin-right: 5px;
+      & > svg {
+        fill : $steel1; 
+      }
+    }
+  }
+
+  .label {
+    display: block;
+    margin-top: 2px;
+  }
+
+}

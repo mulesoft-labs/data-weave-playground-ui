@@ -1,0 +1,20 @@
+:local {
+
+  .wrapper {
+    position: fixed;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 99999;
+
+    .item {
+      padding: 8px;
+      font-size: 10px;
+      cursor: pointer;
+      
+      &:hover {
+        background: #f9fafb;
+      }
+    } 
+  }
+
+}

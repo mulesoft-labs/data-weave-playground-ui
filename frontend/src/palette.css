@@ -1,0 +1,46 @@
+/* BASE COLORS */
+$dark1: #262626;
+$grey0: #fcfcfc;
+$grey1: #f5f5f5;
+$grey2: #cccccc;
+$grey3: #eeeeee;
+$grey4: #e6e6e6;
+$steel1: #6b6c6d;
+$steel2: #58595a;
+$steel3: #3a3b3c;
+$steel4: #262728;
+$steel5: #121314;
+$black03: rgba(0, 0, 0, 0.03);
+$black07: rgba(0, 0, 0, 0.07);
+$black5: rgba(0, 0, 0, 0.5);
+$white5: rgba(255 255, 255, 0.5);
+$mule: #00a2df;
+$lightMule: rgba(0, 162, 223, 0.05);
+$red1: #d1344e;
+$coreBlue4: #087299;
+$coreBlue5: #114459;
+$robustBlue4: #32444D;
+$steel3: #3A3B3C;
+
+/* COMPONENT COLORS */
+$iconBarBg: $dark1;
+
+$sideBarBg: #FAFAFA;
+$sideBarTitleBg: #fff;
+$sideBarTitleColor: $dark1;
+$sideBarHoverBg: $black03;
+
+$toolBarBg: #fff;
+$toolBarHandle: $grey2;
+
+$workbenchHandle: $black07;
+
+$dwEditorTitleColor: $dark1;
+$dwEditorTitleBg: #fff;
+$dwEditorGlyphHighlight: $lightMule;
+
+$previewTitleColor: $dark1;
+$previewTitleBg: $grey1;
+
+$formFieldColor: $dark1;
+$formFieldError: $red1;

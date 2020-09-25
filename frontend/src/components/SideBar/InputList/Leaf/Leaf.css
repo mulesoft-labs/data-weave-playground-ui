@@ -1,0 +1,26 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+
+    .badge {
+      margin-top: 3px;
+    }
+
+    .label {
+      display: block;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background: $sideBarHoverBg;
+    }
+  }
+
+}

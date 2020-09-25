@@ -1,0 +1,32 @@
+plugins {
+    id "com.moowork.node" version "1.3.1"
+}
+
+task runFastTest(type: NpmTask) {
+    args = ['run','test']
+}
+
+task staticWebpage(type: NpmTask) {
+    args = ['run','build:static']
+}
+
+task startStatic(type: NpmTask) {
+  args = ['start']
+}
+
+staticWebpage.dependsOn(npmInstall)
+build.dependsOn(staticWebpage)
+
+
+node {
+    // Version of node to use.
+    version = '8.9.3'
+
+    // Version of npm to use.
+    npmVersion = '6.13.4'
+
+    // If true, it will download node using above parameters.
+    // If false, it will try to use globally installed node.
+    download = true
+
+}

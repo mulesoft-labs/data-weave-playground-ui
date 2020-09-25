@@ -1,0 +1,14 @@
+
+{
+  "main": "/main.dwl",
+  "inputs": [
+    {
+      "name": "payload",
+      "content": "ewogICAgIm1lc3NhZ2UiOiAiSGVsbG8gd29ybGQhIgp9",
+      "contentType": "application/json"
+    }
+  ],
+  "resources": {
+    "/main.dwl": "%dw 2.0\noutput application/json\n---\npayload."
+  }
+}

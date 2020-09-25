@@ -1,0 +1,27 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background: $sideBarBg;
+
+    & > .fullSize {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chooser {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .splitPane {
+    width: 100%;
+  }
+
+}

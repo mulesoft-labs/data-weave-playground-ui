@@ -1,0 +1,30 @@
+@import 'palette';
+
+:local {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    background: $toolBarBg;
+    min-height: 25px;
+    height: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+  .content {
+    flex: 1;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+  }
+  
+}
