@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-# data-weave-playground-ui
+# Data Weave Playground UI
+
 The UI of the playground
-=======
-# DataWeave playground
 
 An independent web-based development environment for the DataWeave language.
-
-## Running the playground
-
-`./gradlew backend:run`
 
 ## Running the UI locally
 
@@ -31,20 +25,3 @@ Run tests: `npm run test`
 
 Build a static deployable artifact: `npm run build:static`
 
-
-## How to build the Docker image
-
-```
- ./gradlew backend:distDocker
-```
-
-## Usage
-```
-docker pull machaval/dw-playground:2.3.0-SNAPSHOT
-docker run -it --rm -p8080:8080 machaval/dw-playground:2.3.0-SNAPSHOT
-```
-
-By default the playground starts in port 8080 and you can hit [http://localhost:8080/](http://localhost:8080/) 
-
-Check [https://hub.docker.com/r/machaval/dw-playground/tags](https://hub.docker.com/r/machaval/dw-playground/tags) for other available versions.
->>>>>>> Initial Commit

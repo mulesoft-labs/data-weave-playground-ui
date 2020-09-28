@@ -71,7 +71,7 @@ export const fetchPreviewSuccess = (response: IExecutorResponse) => (dispatch, g
     dispatch({
       type: DataweaveAction.PREVIEW_REQUEST_SUCCESS,
       payload: {
-        content: response.result.content,
+        content: response.result.value,
       }
     });
     dispatch(updateLogs(response.logs));
@@ -114,7 +114,7 @@ export const fetchWeaveTypes = () =>
       });
 
       if (!response.success) throw new Error(response.error.message);
-      const wtype = await DWLanguageClient.getInstance().inferType(response.result.content)
+      const wtype = await DWLanguageClient.getInstance().inferType(response.result.value)
       dispatch(fetchWeaveTypesSuccess(wtype.toString(), input.path));
     } catch (e) {
       dispatch(

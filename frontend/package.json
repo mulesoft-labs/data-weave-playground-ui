@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "npm run clear:build && node webpack/dev-server.js",
-    "clear:build": "rm -rf build && rm -rf dist && mkdir build && mkdir dist",
+    "clean": "rm -rf build && rm -rf dist ",
+    "clear:build": "npm run clean && mkdir build && mkdir dist",
     "test": "jest --verbose",
     "build:aliases": "node scripts/aliasesGenerator.js webpack/aliases.js -j package.json -t tsconfig.json",
     "build:static": "npm run clear:build && webpack --config webpack/config.production.js",

@@ -1,8 +1,8 @@
 {
   "success": true,
   "result": {
-    "content": "{\n  \"message\": \"Hello world!\"\n}",
-    "contentType": "application/json",
+    "value": "{\n  \"message\": \"Hello world!\"\n}",
+    "mimeType": "application/json",
     "encoding": "UTF-8",
     "logs": [
 

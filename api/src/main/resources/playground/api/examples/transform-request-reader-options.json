@@ -1,16 +1,16 @@
 {
   "main": "/main.dwl",
-  "inputs": [
-    {
-      "name": "payload",
-      "content": "ewogICAgIm1lc3NhZ2UiOiAiSGVsbG8gd29ybGQhIgp9",
-      "contentType": "application/json",
+  "inputs": {
+    "payload": {
+      "value": "ewogICAgIm1lc3NhZ2UiOiAiSGVsbG8gd29ybGQhIgp9",
+      "kind": "binary",
+      "mimeType": "application/json",
       "properties": {
         "separator": ""
       }
     }
-  ],
-  "resources": {
-    "/main.dwl": "%dw 2.0\noutput application/json\n---\npayload."
+  },
+  "fs": {
+    "/main.dwl": "%dw 2.0\noutput application/json\n---\npayload"
   }
 }

@@ -12,11 +12,13 @@ types:
     type: object
     properties:
       main: string
-      resources:
+      fs:
         type: object
         properties:
           //: string
-      inputs: TransformInput[]
+      inputs:
+        properties:
+          //: TransformInput
     examples:
       simple:
         !include examples/transform-request.json
@@ -25,9 +27,12 @@ types:
   TransformInput:
     type: object
     properties:
-      name: string
-      content: string
-      contentType: string
+      value: string
+      kind:
+        type: string
+        enum:
+          - binary
+      mimeType: string
       properties?:
         type: object
 
@@ -44,8 +49,8 @@ types:
       result?:
         type: object
         properties:
-          content: string
-          contentType: string
+          value: string
+          mimeType: string
           encoding?: string
           logs: Log[]
     examples:

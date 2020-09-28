@@ -35,8 +35,8 @@ export interface IExecutorResponse {
   success: boolean;
   logs?: ILogEntry[];
   result?: {
-    contentType: MediaType;
-    content: string;
+    mimeType: MediaType;
+    value: string;
     encoding: string;
   };
   error?: {

@@ -6,6 +6,10 @@ task runFastTest(type: NpmTask) {
     args = ['run','test']
 }
 
+task runClean(type: NpmTask) {
+    args = ['run', 'clean']
+}
+
 task staticWebpage(type: NpmTask) {
     args = ['run','build:static']
 }
@@ -14,6 +18,7 @@ task startStatic(type: NpmTask) {
   args = ['start']
 }
 
+clean.dependsOn(runClean)
 staticWebpage.dependsOn(npmInstall)
 build.dependsOn(staticWebpage)
 
