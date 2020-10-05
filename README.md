@@ -10,9 +10,9 @@ An independent web-based development environment for the DataWeave language.
 
 Before you get started, you need to register with our private npm repository so you can download the Anypoint modules.
 
-`npm login --registry=https://npm.mulesoft.com --scope=@mulesoft`
+`npm login --registry=https://nexus3.build.msap.io/repository/npm-internal/ --scope=@mulesoft`
 
-When prompted, enter your github username and password. If you have 2-factor authentication enabled, you’ll get a 401 after attempting to login. As a workaround, you can temporarily disable 2FA in your settings, login with your credentials and then re-enable 2FA.
+When prompted, enter your **Jenkins** username and password. If you have 2-factor authentication enabled, you’ll get a 401 after attempting to login. As a workaround, you can temporarily disable 2FA in your settings, login with your credentials and then re-enable 2FA.
 
 Install dependencies: 
 `npm i`
