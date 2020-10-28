@@ -11,6 +11,7 @@ export let SUPPORTED_VERSIONS = [
   "2.2.1",
   "2.2.2",
   "2.3.0",
+  "2.4.0"
 ];
 
 

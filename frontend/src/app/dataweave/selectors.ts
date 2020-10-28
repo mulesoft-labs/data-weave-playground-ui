@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import { IStore } from 'common/types';
 import { getAllInputs, getCurrentScript, getMainScript } from 'project/selectors';
 import { IInputDirective } from 'dataweave/types';
-import { isBinary, getFormatFromMediaType } from 'fileSystem/helpers';
+import { isBinary, getFormatFromMediaType, DATA_FORMATS } from 'fileSystem/helpers';
 import { Base64 } from 'js-base64';
 import { MediaType } from 'fileSystem/types';
 
@@ -55,11 +55,23 @@ export const getInputDirectivesFromScript = createSelector(getCurrentScriptHeade
 export const getOutputMediaTypeFromScript = createSelector(getMainScriptHeader, headerLines => {
   for (let i = 0; i < headerLines.length; i++) {
     const result = /output\s+((?:application|text)\/(?:json|xml|csv|dw|java))/.exec(headerLines[i].trim());
-    if (!result || !result[1]) continue;
+    if (!result || !result[1]) {
+      const result = /output\s+((?:json|xml|csv|dw|java))/.exec(headerLines[i].trim());
+      if (!result || !result[1]) {
+        continue;
+      } else{
+        for (let i = 0; i < DATA_FORMATS.length; i++) {
+          if(DATA_FORMATS[i].format == result[1]){
+            return DATA_FORMATS[i].mediaType;
+          }
+        }
+      }
+
+    }
     return result[1] as MediaType;
   }
-
-  return null;
+  //Use text by default
+  return MediaType.TXT;
 });
 
 export const isHttpProject = createSelector(getMainScriptHeader, header => {
