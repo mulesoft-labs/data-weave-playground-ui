@@ -74,7 +74,7 @@ module.exports = {
     ]),
     new MetaVersionsPlugin(),
     new ZipPlugin({
-      filename: `dw-playground-0.1.zip`,
+      filename: `dw-playground-0.2.zip`,
       path: path.join(rootPath, 'dist')
     }),
     new webpack.NoEmitOnErrorsPlugin()

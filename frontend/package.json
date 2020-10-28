@@ -78,7 +78,7 @@
     "@mulesoft/anypoint-navbar": "0.8.0",
     "@mulesoft/anypoint-styles": "2.5.3",
     "@mulesoft/data-weave-monaco": "latest-3.1.1",
-    "@mulesoft/dw-parser-js": "latest-2.3.0",
+    "@mulesoft/dw-parser-js": "latest-2.4.0",
     "@types/jest": "21.1.1",
     "@types/moment": "^2.13.0",
     "@types/node": "8.0.24",

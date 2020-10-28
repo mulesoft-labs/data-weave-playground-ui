@@ -38,12 +38,12 @@ export const getInputDirectivesFromScript = createSelector(getCurrentScriptHeade
   let inputDirectives: IInputDirective[] = [];
 
   for (let i = 0; i < headerLines.length; i++) {
-    const result = /input\s+(\S+)\s+((?:application|text)\/(?:json|xml|csv|dw|plain))/.exec(headerLines[i].trim());
+    const result = /input\s+(\S+)\s+((?:application|text)\/(?:\w+))/.exec(headerLines[i].trim());
 
     if (!result || !result[1] || !result[2]) continue;
 
     inputDirectives.push({
-      name: result[1],
+      name: result[1],      
       mediaType: result[2] as MediaType,
       line: i + 1
     });
@@ -54,9 +54,9 @@ export const getInputDirectivesFromScript = createSelector(getCurrentScriptHeade
 
 export const getOutputMediaTypeFromScript = createSelector(getMainScriptHeader, headerLines => {
   for (let i = 0; i < headerLines.length; i++) {
-    const result = /output\s+((?:application|text)\/(?:json|xml|csv|dw|java))/.exec(headerLines[i].trim());
+    const result = /output\s+((?:application|text)\/(?:\w+))/.exec(headerLines[i].trim());
     if (!result || !result[1]) {
-      const result = /output\s+((?:json|xml|csv|dw|java))/.exec(headerLines[i].trim());
+      const result = /output\s+((?:\w+))/.exec(headerLines[i].trim());
       if (!result || !result[1]) {
         continue;
       } else{
@@ -72,10 +72,6 @@ export const getOutputMediaTypeFromScript = createSelector(getMainScriptHeader, 
   }
   //Use text by default
   return MediaType.TXT;
-});
-
-export const isHttpProject = createSelector(getMainScriptHeader, header => {
-  return header.some($ => $.includes('from dw::http::Server'));
 });
 
 export const getOutputFormatFromScript = createSelector(getOutputMediaTypeFromScript, mediaType => {
