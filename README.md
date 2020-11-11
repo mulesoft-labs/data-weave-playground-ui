@@ -4,7 +4,13 @@ The UI of the playground
 
 An independent web-based development environment for the DataWeave language.
 
-## Running the UI locally
+## How to Run the Playground in your local machine
+
+`dw --eval --spell Playground`
+
+
+
+## Running the UI locally for development
 
 *All these steps must be done inside the `frontend` directory.*
 
@@ -24,4 +30,6 @@ Visit `http://localhost:25565` to access the playground. Also make sure to have 
 Run tests: `npm run test`
 
 Build a static deployable artifact: `npm run build:static`
+
+
 
