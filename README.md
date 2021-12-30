@@ -31,5 +31,7 @@ Run tests: `npm run test`
 
 Build a static deployable artifact: `npm run build:static`
 
+## Runing the playground
 
+`dw --eval --spell Playground`
 

@@ -32,16 +32,17 @@ export interface IInputDirective {
 }
 
 export interface IExecutorResponse {
-  success: boolean;
-  logs?: ILogEntry[];
+  success: boolean;  
   result?: {
     mimeType: MediaType;
     value: string;
     encoding: string;
+    logs?: ILogEntry[];
   };
   error?: {
     location?: Location;
     message: string;
+    logs?: ILogEntry[];
   };
 }
 

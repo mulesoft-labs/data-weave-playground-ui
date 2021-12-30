@@ -49,7 +49,7 @@ export const fetchPreview = () =>
 
       if (!response.success) {
         dispatch(fetchPreviewFailure(response));
-        dispatch(updateLogs(response.logs));
+        dispatch(updateLogs(response.error.logs));
       } else {
         dispatch(fetchPreviewSuccess(response));
       }
@@ -74,7 +74,7 @@ export const fetchPreviewSuccess = (response: IExecutorResponse) => (dispatch, g
         content: response.result.value,
       }
     });
-    dispatch(updateLogs(response.logs));
+    dispatch(updateLogs(response.result.logs));
   } else {
     dispatch(fetchPreviewFailure(response));
   }

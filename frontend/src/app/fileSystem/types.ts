@@ -22,7 +22,7 @@ export enum Format {
     JAVA = 'java',
     DW = 'dwl',
     XLSX = 'xlsx',
-    TXT = 'txt',
+    TXT = 'text',
     MULTIPART = 'multipart',
     YAML = 'yaml',
     URL_ENCODED="urlencoded"
